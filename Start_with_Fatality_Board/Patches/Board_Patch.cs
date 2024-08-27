@@ -12,7 +12,7 @@ namespace Start_with_Fatality_Board.Patches
         {
             [HarmonyPatch("firstDayAnimation")]
             [HarmonyPostfix]
-            internal static void LoadTelevisionFromConfig()
+            internal static void UnlockFatalitiesSign()
             {
                 if (StartOfRound.Instance.gameStats.daysSpent == 0 && !StartOfRound.Instance.isChallengeFile)
                 {
@@ -37,9 +37,9 @@ namespace Start_with_Fatality_Board.Patches
 
                     Start_with_fatality_board_base.LogDebug($"Checking unlockableName {unlockableName} and ID {unlockableID}.");
 
-                    var televisionResult = CheckConfig(unlockableID, unlockableName);
+                    var fatalitiesResult = CheckConfig(unlockableID, unlockableName);
 
-                    if (televisionResult) break;
+                    if (fatalitiesResult) break;
                 }
             }
 
