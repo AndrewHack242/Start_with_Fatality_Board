@@ -6,6 +6,7 @@ namespace Start_with_Fatality_Board.Patches
 {
     internal class Board_Patch
     {
+        // Shoutout to Robopirate for basically doing the whole thing for me over at https://github.com/kylefohrman/LC_Television_Unlock
         [HarmonyPatch(typeof(StartOfRound))]
         internal class NewSaveStartPatch
         {
